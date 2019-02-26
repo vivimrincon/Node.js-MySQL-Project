@@ -1,0 +1,26 @@
+{
+  "name": "NodejsMySQLProject",
+  "version": "1.0.0",
+  "description": "An Amazon-like storefront with MySQL. This CLI application takes in orders from customers and depletes stock from the store's inventory.",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttalgihon/Node.js-MySQL-Project.git"
+  },
+  "keywords": [],
+  "author": "Viviana Rincon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttalgihon/Node.js-MySQL-Project/issues"
+  },
+  "homepage": "https://github.com/ttalgihon/Node.js-MySQL-Project#readme",
+  "dependencies": {
+    "columnify": "^1.5.4",
+    "express": "^4.16.4",
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  }
+}
