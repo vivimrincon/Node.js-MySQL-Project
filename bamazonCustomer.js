@@ -24,10 +24,17 @@ connection.connect((err)=>{
 function wholeProductsTable(){
     connection.query("SELECT * FROM bamazon.products", (err, datatable)=>{
         if (err) throw err;
-        console.log(columnify(datatable));
+        let department = [];
+        for (let i = 0; i < datatable.length; i++) {
+            department.push(datatable[i].department_name)
+    
+        }
+        //console.log(department);
+        //console.log((datatable));
         // prompts questions.js
-        let questions = require('./questions');
-        inq.prompt(questions).then(answers => {
+        let questions = require('./questions')(department);
+        console.log(questions);
+        inq.prompt([questions[0]]).then(answers => {
             console.log('\nOrder receipt:');
             console.log(JSON.stringify(answers, null, '  '));
         });
